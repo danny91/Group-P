@@ -9,7 +9,7 @@ from email.MIMEText import MIMEText
 import csv
 import sys
 from myconfig import *
-# Init email counter
+# Init email counter at 0
 emailcount = 0
 #Loop continuous
 als = True
