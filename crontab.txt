@@ -1,0 +1,4 @@
+@reboot python ~/project/button.py
+@reboot python ~/project/python.py
+@reboot python ~/project/templed.py
+@reboot python ~/project/restart.py

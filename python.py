@@ -9,7 +9,7 @@ from email.MIMEText import MIMEText
 import csv
 import sys
 from myconfig import *
-# Init email counter at 0
+# Init email counter
 emailcount = 0
 #Loop continuous
 als = True
@@ -27,7 +27,7 @@ while als:
 	     # Check if email has already been sent
        if emailcount < 1:
 		 # Email info
-        sent_from = gmail_user       
+        sent_from = gmail_user      
         msg = MIMEMultipart()
         msg['From'] = configemailfrom
         msg['To'] = configemailto

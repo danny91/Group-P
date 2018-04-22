@@ -9,16 +9,16 @@ from email.MIMEText import MIMEText
 import csv
 import sys
 from myconfig import *
-
+from time import sleep
 ledon = False
 led = LED(27)
 button = Button(2)
-
+# Ensure LED starts off
+led.off()
 # For easier demonstration Press rather than release
 #button.wait_for_release()
 button.wait_for_press()
 ledon = True
-led.on()
 sent_from = gmail_user    
 msg = MIMEMultipart()
 msg['From'] = configemailfrom
@@ -33,8 +33,9 @@ server.login(gmail_user, gmail_password)
 server.sendmail(sent_from, to, msg.as_string())
 server.close()
 print 'Email sent!'
-# If something went wrong make sure the counter is 0
 
 while ledon:
  led.on()
- time.sleep(900)
+ sleep(0.5)
+ led.off()
+ sleep(0.5)
